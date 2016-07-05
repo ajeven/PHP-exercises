@@ -12,5 +12,6 @@ do {
 		$guess = fgets(STDIN);
 	} elseif ($guess == $number) {
 		fwrite(STDOUT, "You win!\n");
+		if (true) break;
 	}
 } while ($guess !== $number);
