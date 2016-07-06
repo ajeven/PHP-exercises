@@ -15,3 +15,5 @@ echo $solution = array_sum($grades) . "\n";
 echo "This is your average.\n";
 $average = $solution / count($grades) . "\n";
 echo round($average) . "\n";
+
+$f = 3;
