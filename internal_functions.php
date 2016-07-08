@@ -1,15 +1,16 @@
 <?php
 //fix this later ... its not complete...
 function inspect($all) {
-	echo "My type is $type and I have this value: \n";
 		$type = gettype($all);
 	if (is_null($all)) { 
-		echo "NULL\n"
-	} if (is_array($all) && empty($all)) {
-				echo "EMPTY\n";
-	} if (is_array($all)) {
+		return "The value is NULL\n";
+	} elseif (is_string($all) && empty($all)) {
+		return "Im an empty string\n";
+	} elseif (is_array($all) && empty($all)) {
+				return " I am an EMPTY array\n";
+	} elseif (is_array($all)) {
 		foreach ($all as $key => $value) {
-			echo "Index $key is: $value \n";
+			return "Index $key is: $value \n";
 		}
 		} else {
 			var_export($all) . PHP_EOL;
@@ -30,7 +31,7 @@ $num4 = 14.4;
 $null = NULL;
 // TODO: After each echo statement, use inspect() to output the variable's type and its value
 echo 'Inspecting $num1:' . PHP_EOL;
-echo inspect($$num1) . PHP_EOL;
+echo inspect($num1) . PHP_EOL;
 echo 'Inspecting $num2:' . PHP_EOL;
 echo inspect($num2) . PHP_EOL;
 echo 'Inspecting $num3:' . PHP_EOL;
