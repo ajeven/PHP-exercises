@@ -39,5 +39,5 @@ function error($a, $b) {
 }
 
 $a = 40;
-$b = 20;
+$b = 5;
 echo error($a, $b);
