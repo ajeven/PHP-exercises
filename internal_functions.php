@@ -1,16 +1,16 @@
 <?php
 //fix this later ... its not complete...
 function inspect($all) {
-	$type = gettype($all);
 	echo "My type is $type and I have this value: \n";
-		if (is_array($all)) {
-			if (empty($all)) {
+		$type = gettype($all);
+	if (is_null($all)) { 
+		echo "NULL\n"
+	} if (is_array($all) && empty($all)) {
 				echo "EMPTY\n";
-			} else {
-				foreach ($all as $key => $value) {
-					echo "Index $key is: $value \n";
-				}
-			}
+	} if (is_array($all)) {
+		foreach ($all as $key => $value) {
+			echo "Index $key is: $value \n";
+		}
 		} else {
 			var_export($all) . PHP_EOL;
 		}
