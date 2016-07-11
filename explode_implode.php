@@ -1,8 +1,10 @@
 <?php
 
 // Converts array into list n1, n2, ..., and n3
-function humanizedList($array) {
-	sort($array);
+function humanizedList($array, $sort = false) {
+	if ($sort) {
+		sort($array);
+	}
 	$famousFakePhysicists = implode(", ", $array);
 	//function must return or you will get a value of NULL.
 	return $famousFakePhysicists;
