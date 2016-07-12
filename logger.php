@@ -1,7 +1,8 @@
 <?php
 
 function logMessage($logLevel, $message)
-{
+{	
+	
 	$date = date('Y-m-d');
 	$filename = "log-YYYY-MM-DD.log";
 	$handler = fopen($filename, 'a');
