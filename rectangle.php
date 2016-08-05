@@ -2,8 +2,8 @@
 
 class Rectangle
 {
-	public $height;
-	public $width;
+	private $height;
+	private $width;
 
 	public function __construct($height, $width)
 	{
@@ -20,7 +20,7 @@ class Rectangle
 	{
 		if ($this->height === $this->width)
 		{
-			$perimeter = $this->height + $this->height + $this->height + $this->height;
+			$perimeter = $this->height * 4;
 			return $perimeter;
 		} else
 		{
@@ -28,5 +28,20 @@ class Rectangle
 		}
 	}
 
+	public function getHeight()
+	{
+		return $this->height;
+
+	}
+	public function getWidth()
+	{
+		return $this->width;
+
+	}
+	public function getSide()
+	{
+		return $this->side;
+
+	}
 }
 	

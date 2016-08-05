@@ -16,16 +16,32 @@ class Square extends Rectangle
 		return $area;
 	}
 
-	public function perimeter()
+	public function getHeight()
 	{
-		if ($this->height === $this->width)
-		{
-			$perimeter = $this->height * 4;
-			return $perimeter;
-		} else
-		{
-			echo " Is not a square " . "\n";
-		}
+		return $this->height;
+
 	}
+	public function getWidth()
+	{
+		return $this->width;
+
+	}
+	public function getSide()
+	{
+		return $this->side;
+
+	}
+
+	// public function perimeter()
+	// {
+	// 	if ($this->height === $this->width)
+	// 	{
+	// 		$perimeter = $this->height * 4;
+	// 		return $perimeter;
+	// 	} else
+	// 	{
+	// 		echo " Is not a square " . "\n";
+	// 	}
+	// }
 
 }

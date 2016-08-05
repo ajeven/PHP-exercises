@@ -1,7 +1,7 @@
 <?php
 class Log {
-	public $filename;
-	public $handle;
+	private $filename;
+	private $handle;
 	public $date;
 	public function __construct($prefix = 'log')
 	{	
@@ -25,5 +25,13 @@ class Log {
 	public function __destruct() {
 		echo "all done" . "\n";
 		fclose($this->handle);
+	}
+	public function getFile()
+	{
+		return $this->filename;
+	}
+	public function getHandle()
+	{
+		return $this->handle;
 	}
 }
